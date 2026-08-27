@@ -1,0 +1,4 @@
+import { BarChart3, ClipboardList, HardDrive, Home, UserRound } from "lucide-react";
+import { NavLink } from "react-router-dom";
+const items=[["/dashboard",Home,"Home"],["/tickets",ClipboardList,"Tickets"],["/tasks",BarChart3,"Tasks"],["/assets",HardDrive,"Assets"],["/profile",UserRound,"Profile"]];
+export default function BottomNav(){return <nav className="sticky bottom-0 z-30 border-t border-slate-200/80 bg-white/95 px-2 pb-2 pt-2 backdrop-blur"><div className="grid grid-cols-5">{items.map(([to,Icon,label])=><NavLink key={to} to={to} className={({isActive})=>`flex flex-col items-center gap-1 rounded-xl py-2 text-[10px] font-semibold transition ${isActive?"text-teal-700":"text-slate-400 hover:text-slate-600"}`}><Icon size={19}/>{label}</NavLink>)}</div></nav>}
