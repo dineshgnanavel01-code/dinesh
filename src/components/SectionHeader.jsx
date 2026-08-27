@@ -1,0 +1,1 @@
+export default function SectionHeader({title,link,onClick}){return <div className="mb-3 flex items-center justify-between"><h2 className="text-[15px] font-bold text-slate-900">{title}</h2>{link&&<button onClick={onClick} className="text-xs font-semibold text-teal-700 hover:text-teal-900">{link}</button>}</div>}
